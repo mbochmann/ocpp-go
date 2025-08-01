@@ -1,7 +1,6 @@
 package ocppj
 
 import (
-	"errors"
 	"fmt"
 
 	"gopkg.in/go-playground/validator.v9"
@@ -305,12 +304,11 @@ func (s *Server) HandleFailedResponseError(clientID string, requestID string, er
 	switch err.(type) {
 	case validator.ValidationErrors:
 		// Validation error
-		var validationErr validator.ValidationErrors
-		errors.As(err, &validationErr)
-		responseErr = errorFromValidation(s, validationErr, requestID, featureName)
+		validationErr := err.(validator.ValidationErrors)
+		responseErr = errorFromValidation(validationErr, requestID, featureName)
 	case *ocpp.Error:
 		// Internal OCPP error
-		errors.As(err, &responseErr)
+		responseErr = err.(*ocpp.Error)
 	case error:
 		// Unknown error
 		responseErr = ocpp.NewError(GenericError, err.Error(), requestID)

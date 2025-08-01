@@ -21,7 +21,7 @@ type ChargingStationHandler interface {
 	OnUpdateFirmware(request *UpdateFirmwareRequest) (response *UpdateFirmwareResponse, err error)
 }
 
-const ProfileName = "Firmware"
+const ProfileName = "firmware"
 
 var Profile = ocpp.NewProfile(
 	ProfileName,

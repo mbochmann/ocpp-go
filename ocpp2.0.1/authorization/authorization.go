@@ -15,7 +15,7 @@ type ChargingStationHandler interface {
 	OnClearCache(request *ClearCacheRequest) (confirmation *ClearCacheResponse, err error)
 }
 
-const ProfileName = "Authorization"
+const ProfileName = "authorization"
 
 var Profile = ocpp.NewProfile(
 	ProfileName,

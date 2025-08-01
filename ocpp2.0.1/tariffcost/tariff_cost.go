@@ -13,7 +13,7 @@ type ChargingStationHandler interface {
 	OnCostUpdated(request *CostUpdatedRequest) (confirmation *CostUpdatedResponse, err error)
 }
 
-const ProfileName = "TariffCost"
+const ProfileName = "tariffCost"
 
 var Profile = ocpp.NewProfile(
 	ProfileName,

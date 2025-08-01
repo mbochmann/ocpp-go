@@ -13,7 +13,7 @@ type CSMSHandler interface {
 type ChargingStationHandler interface {
 }
 
-const ProfileName = "Meter"
+const ProfileName = "meter"
 
 var Profile = ocpp.NewProfile(
 	ProfileName,
