@@ -28,7 +28,7 @@ type ChargingStationHandler interface {
 	OnSetVariables(request *SetVariablesRequest) (response *SetVariablesResponse, err error)
 }
 
-const ProfileName = "Provisioning"
+const ProfileName = "provisioning"
 
 var Profile = ocpp.NewProfile(
 	ProfileName,

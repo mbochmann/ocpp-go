@@ -19,7 +19,7 @@ type ChargingStationHandler interface {
 	OnUnlockConnector(request *UnlockConnectorRequest) (response *UnlockConnectorResponse, err error)
 }
 
-const ProfileName = "RemoteControl"
+const ProfileName = "remoteControl"
 
 var Profile = ocpp.NewProfile(
 	ProfileName,

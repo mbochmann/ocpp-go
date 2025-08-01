@@ -19,7 +19,7 @@ type ChargingStationHandler interface {
 	OnReserveNow(request *ReserveNowRequest) (resp *ReserveNowResponse, err error)
 }
 
-const ProfileName = "Reservation"
+const ProfileName = "reservation"
 
 var Profile = ocpp.NewProfile(
 	ProfileName,

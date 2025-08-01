@@ -19,7 +19,7 @@ type ChargingStationHandler interface {
 	OnSetDisplayMessage(request *SetDisplayMessageRequest) (response *SetDisplayMessageResponse, err error)
 }
 
-const ProfileName = "Display"
+const ProfileName = "display"
 
 var Profile = ocpp.NewProfile(
 	ProfileName,

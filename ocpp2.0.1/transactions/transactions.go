@@ -15,7 +15,7 @@ type ChargingStationHandler interface {
 	OnGetTransactionStatus(request *GetTransactionStatusRequest) (response *GetTransactionStatusResponse, err error)
 }
 
-const ProfileName = "Transactions"
+const ProfileName = "transactions"
 
 var Profile = ocpp.NewProfile(
 	ProfileName,

@@ -15,7 +15,7 @@ type ChargingStationHandler interface {
 	OnDataTransfer(request *DataTransferRequest) (confirmation *DataTransferResponse, err error)
 }
 
-const ProfileName = "Data"
+const ProfileName = "data"
 
 var Profile = ocpp.NewProfile(
 	ProfileName,
