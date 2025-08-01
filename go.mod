@@ -1,4 +1,4 @@
-module github.com/mbochmann/ocpp-go
+module github.com/lorenzodonini/ocpp-go
 
 go 1.16
 
